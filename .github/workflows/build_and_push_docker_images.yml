@@ -7,10 +7,10 @@ on:
     types: [published]
 env:
   MOSQUITTO_VERSION_1: 1.6.15
-  MOSQUITTO_VERSION_2: 2.0.18
+  MOSQUITTO_VERSION_2: 2.0.20
   MOSQUITTO_VERSION_SUFFIX: -mosquitto_
-  DOCKERFILE_MOSQUITTO_VERSION: 2.0.18
-  DOCKERHUB_REPO: mosquitto-go-auth
+  DOCKERFILE_MOSQUITTO_VERSION: 2.0.20
+  DOCKERHUB_REPO: mosquitto-go-auth-ch
 jobs:
   mosq_1:
     name: Build and publish with Mosquitto version 1.x
