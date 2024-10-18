@@ -11,7 +11,7 @@ import (
 	"time"
 
 	goredis "github.com/go-redis/redis/v8"
-	bes "github.com/iegomez/mosquitto-go-auth/backends"
+	bes "github.dev/clementchubb/mosquitto-go-authbackends"
 	goCache "github.com/patrickmn/go-cache"
 	log "github.com/sirupsen/logrus"
 )

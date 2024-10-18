@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/iegomez/mosquitto-go-auth/backends/constants"
-	"github.com/iegomez/mosquitto-go-auth/hashing"
+	. "github.dev/clementchubb/mosquitto-go-authbackends/constants"
+	"github.dev/clementchubb/mosquitto-go-authhashing"
 	log "github.com/sirupsen/logrus"
 	. "github.com/smartystreets/goconvey/convey"
 )

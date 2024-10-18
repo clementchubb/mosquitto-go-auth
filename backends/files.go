@@ -3,8 +3,8 @@ package backends
 import (
 	"strings"
 
-	"github.com/iegomez/mosquitto-go-auth/backends/files"
-	"github.com/iegomez/mosquitto-go-auth/hashing"
+	"github.dev/clementchubb/mosquitto-go-authbackends/files"
+	"github.dev/clementchubb/mosquitto-go-authhashing"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 )

@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/iegomez/mosquitto-go-auth/hashing"
+	"github.dev/clementchubb/mosquitto-go-authhashing"
 	log "github.com/sirupsen/logrus"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/stretchr/testify/assert"
@@ -68,9 +68,8 @@ func TestBackends(t *testing.T) {
 	})
 
 	Convey("On initialization, unknown checkers should result in an error", t, func() {
-		authOpts["backends"] = "files, redis"
+		authOpts["backends"] = "files"
 		authOpts["files_register"] = "user"
-		authOpts["redis_register"] = "unknown"
 
 		_, err := Initialize(authOpts, log.DebugLevel, version)
 		So(err, ShouldNotBeNil)
@@ -78,9 +77,8 @@ func TestBackends(t *testing.T) {
 	})
 
 	Convey("We should be able to auth users with one backend and acls with a different one", t, func() {
-		authOpts["backends"] = "files, redis"
+		authOpts["backends"] = "files"
 		authOpts["files_register"] = "acl"
-		authOpts["redis_register"] = "user"
 
 		redis, err := NewRedis(authOpts, log.DebugLevel, hashing.NewHasher(authOpts, "redis"))
 		assert.Nil(t, err)
@@ -130,9 +128,8 @@ func TestBackends(t *testing.T) {
 	})
 
 	Convey("When not registering checks, all of them should be available", t, func() {
-		authOpts["backends"] = "files, redis"
+		authOpts["backends"] = "files"
 		delete(authOpts, "files_register")
-		delete(authOpts, "redis_register")
 
 		redis, err := NewRedis(authOpts, log.DebugLevel, hashing.NewHasher(authOpts, "redis"))
 		assert.Nil(t, err)

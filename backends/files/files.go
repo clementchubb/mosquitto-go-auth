@@ -9,9 +9,9 @@ import (
 	"sync"
 	"syscall"
 
-	. "github.com/iegomez/mosquitto-go-auth/backends/constants"
-	"github.com/iegomez/mosquitto-go-auth/backends/topics"
-	"github.com/iegomez/mosquitto-go-auth/hashing"
+	. "github.dev/clementchubb/mosquitto-go-authbackends/constants"
+	"github.dev/clementchubb/mosquitto-go-authbackends/topics"
+	"github.dev/clementchubb/mosquitto-go-authhashing"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 )

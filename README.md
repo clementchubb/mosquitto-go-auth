@@ -473,7 +473,7 @@ Individual backends have their options described in the sections below.
 #### Testing
 
 As of now every backend has proper but really ugly tests in place: they expect services running for each backend, and are also pretty outdated and cumbersome to work with in general.
-This issue captures these concerns and a basic plan to refactor tests: <https://github.com/iegomez/mosquitto-go-auth/issues/67>.
+This issue captures these concerns and a basic plan to refactor tests: <https://github.dev/clementchubb/mosquitto-go-authissues/67>.
 
 You may run all tests (see Testing X for each backend's testing requirements) like this:
 
@@ -1292,7 +1292,7 @@ Options for `mongo` are the following:
 | auth_opt_mongo_insecure_skip_verify  | false        |     N     | Verify server's certificate chain    |
 
 
-If you experience any problem connecting to a replica set, please refer to [this issue](https://github.com/iegomez/mosquitto-go-auth/issues/32).
+If you experience any problem connecting to a replica set, please refer to [this issue](https://github.dev/clementchubb/mosquitto-go-authissues/32).
 
 #### Password hashing
 
@@ -1591,9 +1591,9 @@ This allows building containers for x86_64/AMD64, ARMv6, ARMv7 and ARM64 on a si
 Since there are several issues with using `alpine` based images we are using `debian:stable-slim` for both our build and final image. The final image size is about 60 MB.
 
 Documented issues:
-- https://github.com/iegomez/mosquitto-go-auth/issues/14
-- https://github.com/iegomez/mosquitto-go-auth/issues/15
-- https://github.com/iegomez/mosquitto-go-auth/issues/20
+- https://github.dev/clementchubb/mosquitto-go-authissues/14
+- https://github.dev/clementchubb/mosquitto-go-authissues/15
+- https://github.dev/clementchubb/mosquitto-go-authissues/20
 
 #### Mosquitto version
 The Dockerfile compiles `mosquitto` using the source code from the version specified by `MOSQUITTO_VERSION`.
